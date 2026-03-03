@@ -1,0 +1,217 @@
+Tech Stack:
+
+Next.js 14 (App Router)
+
+TypeScript
+
+Tailwind CSS
+
+shadcn/ui
+
+Framer Motion
+
+Zustand (for cart state)
+
+This task is UI + architecture only (NO backend, NO Supabase yet).
+
+🎨 DESIGN SYSTEM
+
+Create a premium dark fast-food theme using:
+
+Colors:
+
+Primary: #FF3B30
+
+Accent: #FFC107
+
+Background: #0F0F0F
+
+Card: #1A1A1A
+
+Muted Text: #9CA3AF
+
+Success: #22C55E
+
+Typography:
+
+Headings: Poppins or Montserrat
+
+Body: Inter
+
+H1: 48px
+
+H2: 36px
+
+H3: 24px
+
+Body: 16px
+
+Small: 14px
+
+Spacing system:
+Use 8px grid spacing scale.
+
+🏗 ROUTING STRUCTURE
+
+Create this App Router structure:
+
+app/
+(public)/
+page.tsx // Home
+menu/page.tsx
+product/[id]/page.tsx
+tracking/[orderId]/page.tsx
+
+(auth)/
+login/page.tsx
+register/page.tsx
+
+(user)/
+profile/page.tsx
+rewards/page.tsx
+
+(dashboard)/
+kitchen/page.tsx
+admin/page.tsx
+
+Create:
+
+Root layout with Navbar + Footer
+
+Dashboard layout with Sidebar
+
+🏠 HOME PAGE STRUCTURE
+<HomePage> <HeroSection /> <FeaturedCombos /> <HowItWorks /> <RewardsTeaser /> </HomePage>
+
+Create components inside:
+components/home/
+
+🧩 HERO SECTION
+
+Left:
+
+Large bold headline
+
+Short description
+
+2 CTA buttons:
+
+Browse Menu
+
+Let AI Choose For Me
+
+Right:
+
+Large animated burger image
+
+Subtle motion animation
+
+🧩 FEATURED COMBOS
+
+3 product cards
+
+Modern card design
+
+Hover animation
+
+Add to cart button
+
+🧩 PRODUCT CARD (Reusable Component)
+
+Props:
+
+image
+
+name
+
+price
+
+rating
+
+onAddToCart
+
+Design:
+
+Dark card
+
+Rounded-xl
+
+Subtle shadow
+
+Hover scale animation
+
+🛒 CART SYSTEM
+
+Implement Zustand store:
+
+{
+items: [],
+addItem(),
+removeItem(),
+updateQuantity(),
+clearCart()
+}
+
+Create a Cart Drawer using shadcn Sheet:
+
+Slide from right
+
+List items
+
+Live total calculation
+
+Checkout button
+
+🎞 ANIMATIONS
+
+Use Framer Motion for:
+
+Hero fade + slide in
+
+Staggered card reveal
+
+Cart drawer slide
+
+Button hover animations
+
+🎯 MENU PAGE
+
+Category Tabs
+
+Search input
+
+Product grid
+
+Filter UI
+
+Reusable ProductCard
+
+Use static mock data for now.
+
+📦 KITCHEN DASHBOARD
+
+Create a Kanban-style board:
+
+Columns:
+
+Received
+
+Preparing
+
+Cooking
+
+Quality Check
+
+Ready
+
+Orders should be draggable visually (UI only, no backend yet).
+
+🎁 REWARDS PAGE
+
+User rank
+
+Points progress bar
+
+Next reward indicator
+
+Order history mock data

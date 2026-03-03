@@ -1,0 +1,51 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "8H6zHgF81DsduH9RXahP-",
+      "type": "text",
+      "x": 265.2251892089844,
+      "y": 388.7950370719843,
+      "width": 861.1956176757812,
+      "height": 420,
+      "angle": 0,
+      "strokeColor": "#e03131",
+      "backgroundColor": "#ffec99",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a2",
+      "roundness": null,
+      "seed": 397526568,
+      "version": 188,
+      "versionNonce": 1597502504,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1772239088206,
+      "link": null,
+      "locked": false,
+      "text": "item = {\n    id: 1,\n    name: Classic Cheeseburger,\n    category: combos,\n    description:  A juicy 100% beef patty with melted cheddar, \n                    crisp lettuce, tomato,\n                     and our signature sauce.,\n    rating: 3.5,\n    price: 8.45 $,\n    bestSeller : true,\n    reviews: 409\n}",
+      "fontSize": 28,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "item = {\n    id: 1,\n    name: Classic Cheeseburger,\n    category: combos,\n    description:  A juicy 100% beef patty with melted cheddar, \n                    crisp lettuce, tomato,\n                     and our signature sauce.,\n    rating: 3.5,\n    price: 8.45 $,\n    bestSeller : true,\n    reviews: 409\n}",
+      "autoResize": true,
+      "lineHeight": 1.25
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#222"
+  },
+  "files": {}
+}
