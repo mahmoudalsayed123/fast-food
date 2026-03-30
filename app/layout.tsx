@@ -8,7 +8,7 @@ import NavbarMd from '@/components/NavbarMd';
 import NavbarSm from '@/components/NavbarSm';
 import Footer from '@/components/Footer';
 
-import { store } from './store/store.ts';
+import { store } from './store/store';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
