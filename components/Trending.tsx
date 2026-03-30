@@ -5,11 +5,12 @@ import ItemCard from "./ItemCard";
 
 const Trending = () => {
   return (
-    <section className="pt-[100px] p-[20px] sm:p-[40px]">
+    <section className="mt-[60px] p-[20px] sm:p-[40px]">
       <div className="flex flex-col sm:flex-row items-center  justify-center sm:justify-between mb-10">
         <MainHeading
           h1="Trending"
           h2="Now"
+          size="heading"
           description="Our most popular items this week"
         />
         <div>

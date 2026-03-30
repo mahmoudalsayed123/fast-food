@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { useRef } from "react";
+import Link from 'next/link';
+import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { useRef } from 'react';
 
 /* ================= TEXT ANIMATION ================= */
 
@@ -87,7 +87,7 @@ function Particles() {
           transition={{
             duration: 5 + Math.random() * 4,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: 'easeInOut',
           }}
         />
       ))}
@@ -130,19 +130,19 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative pt-[70px] h-[calc(100vh-66.71px)] overflow-hidden sm:ps-[40px]">
+    <section className="relative mt-[67px] pt-[60px] h-[calc(100vh-66.71px)] overflow-hidden sm:ps-[40px]">
       {/* Animated Gradient Background */}
       <motion.div
         className="absolute inset-0 bg-linear-to-br from-primary/10 via-transparent to-accent/10"
         animate={{
-          backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+          backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
         }}
         transition={{
           duration: 18,
           repeat: Infinity,
-          ease: "linear",
+          ease: 'linear',
         }}
-        style={{ backgroundSize: "200% 200%" }}
+        style={{ backgroundSize: '200% 200%' }}
       />
 
       {/* Glow Pulse */}
@@ -155,7 +155,7 @@ const Hero = () => {
         transition={{
           duration: 6,
           repeat: Infinity,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         }}
       />
 
@@ -178,7 +178,7 @@ const Hero = () => {
             className="text-display text-[35px] sm:text-[60px] md:text-[68px] lg:text-[72px] leading-tight text-center lg:text-left w-[600px]"
           >
             {/* LINE 1 */}
-            {"FAST FOOD,".split("").map((char, i) => (
+            {'FAST FOOD,'.split('').map((char, i) => (
               <motion.span key={`line1-${i}`} variants={letter}>
                 {char}
               </motion.span>
@@ -188,7 +188,7 @@ const Hero = () => {
 
             {/* LINE 2 WITH GRADIENT */}
             <span className="text-transparent bg-clip-text bg-linear-to-br from-primary via-primary to-accent">
-              {"FAST DELIVERY.".split("").map((char, i) => (
+              {'FAST DELIVERY.'.split('').map((char, i) => (
                 <motion.span key={`line2-${i}`} variants={letter}>
                   {char}
                 </motion.span>
@@ -202,7 +202,7 @@ const Hero = () => {
           </p>
 
           <div className="flex gap-4 mt-8">
-            <Link href="/">
+            <Link href="/menu">
               <MagneticButton className="button-primary rounded-sm px-4 py-2 sm:px-6 sm:py-3  font-semibold text-[14px] sm:text-[16px]">
                 Browse Menu
               </MagneticButton>
@@ -225,7 +225,7 @@ const Hero = () => {
             style={{
               rotateX: smoothX,
               rotateY: smoothY,
-              transformStyle: "preserve-3d",
+              transformStyle: 'preserve-3d',
             }}
             initial={{ opacity: 0, scale: 0.8, y: 60 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -246,11 +246,11 @@ const Hero = () => {
                 rotateZ: [0, 1.2, 0, -1.2, 0],
               }}
               transition={{
-                y: { duration: 6, repeat: Infinity, ease: "easeInOut" },
+                y: { duration: 6, repeat: Infinity, ease: 'easeInOut' },
                 rotateZ: {
                   duration: 8,
                   repeat: Infinity,
-                  ease: "easeInOut",
+                  ease: 'easeInOut',
                 },
               }}
               whileHover={{ scale: 1.1 }}

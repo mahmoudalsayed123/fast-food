@@ -4,7 +4,7 @@ import React from "react";
 const WhyBuy = () => {
   return (
     <section className="pt-[100px] p-[20px] flex flex-col md:flex-row gap-[50px] md:gap-[10px] lg:gap-[50px] items-center md:justify-between lg:justify-center">
-      <div className="flex flex-col items-center text-center gap-[10px]">
+      <div className="flex flex-col items-center text-center gap-[25px]">
         <div className="bg-[#1a1a1a] w-fit px-5 py-4 rounded-lg cursor-pointer hover:bg-primary/20 hover:scale-110 transition-all">
           <Image
             src="/assets/icons/flame.svg"
@@ -20,7 +20,8 @@ const WhyBuy = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col items-center text-center gap-[10px]">
+
+      <div className="flex flex-col items-center text-center gap-[25px]">
         <div className="bg-[#1a1a1a] w-fit px-5 py-4 rounded-lg cursor-pointer hover:bg-primary/20 hover:scale-110 transition-all">
           <Image
             src="/assets/icons/clock.svg"
@@ -36,7 +37,8 @@ const WhyBuy = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col items-center text-center gap-[10px]">
+
+      <div className="flex flex-col items-center text-center gap-[25px]">
         <div className="bg-[#1a1a1a] w-fit px-5 py-4 rounded-lg cursor-pointer hover:bg-primary/20 hover:scale-110 transition-all">
           <Image
             src="/assets/icons/award.svg"

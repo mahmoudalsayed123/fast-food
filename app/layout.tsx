@@ -1,24 +1,29 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import NavbarMd from "@/components/NavbarMd";
-import NavbarSm from "@/components/NavbarSm";
-import Footer from "@/components/Footer";
+'use client';
+import { Provider } from 'react-redux';
+
+import type { Metadata } from 'next';
+import { Geist, Geist_Mono } from 'next/font/google';
+import './globals.css';
+import NavbarMd from '@/components/NavbarMd';
+import NavbarSm from '@/components/NavbarSm';
+import Footer from '@/components/Footer';
+
+import { store } from './store/store.ts';
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 });
 
-export const metadata: Metadata = {
-  title: "Fast Food",
-  description: "Fast Food Delivery Service",
-};
+// export const metadata: Metadata = {
+//   title: 'Fast Food',
+//   description: 'Fast Food Delivery Service',
+// };
 
 export default function RootLayout({
   children,
@@ -30,12 +35,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
-        <header>
-          <NavbarMd />
-          <NavbarSm />
-        </header>
-        <main>{children}</main>
-        <Footer />
+        <Provider store={store}>
+          <header>
+            <NavbarMd />
+            <NavbarSm />
+          </header>
+          <main>{children}</main>
+          <Footer />
+        </Provider>
       </body>
     </html>
   );

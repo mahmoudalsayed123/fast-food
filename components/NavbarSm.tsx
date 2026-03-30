@@ -1,18 +1,19 @@
-import Image from "next/image";
+import Image from 'next/image';
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
-import { Button } from "./ui/button";
-import Link from "next/link";
-import { navLinks } from "@/app/constant";
+} from '@/components/ui/sheet';
+import { Button } from './ui/button';
+import Link from 'next/link';
+import { navLinks } from '@/app/_constant';
+import CartSheet from './CartSheet';
 
 const NavbarSm = () => {
   return (
-    <div className="block md:hidden shadow-xl border-b border-gray-800 z-50">
+    <div className="block fixed top-0 left-0 right-0 bg-background md:hidden shadow-xl border-b border-gray-800 z-50">
       <div className="p-3 flex justify-between">
         <div>
           <Image
@@ -24,37 +25,7 @@ const NavbarSm = () => {
         </div>
         <div className="flex items-center gap-4">
           {/* Cart Sheet */}
-          <Sheet>
-            <SheetTrigger asChild>
-              <Image
-                src="/assets/icons/cart.svg"
-                alt="cart"
-                width={50}
-                height={50}
-                className="cursor-pointer"
-              />
-            </SheetTrigger>
-            <SheetContent className="bg-background border-none w-[300px] sm:w-[430px] text-foreground">
-              <SheetHeader className="border-b border-gray-800">
-                <SheetTitle className="p-6">
-                  <h1 className="text-subheading">Your Cart</h1>
-                </SheetTitle>
-              </SheetHeader>
-
-              <div className="flex flex-col  flex-1 items-center justify-center gap-4">
-                <Image
-                  src="/assets/icons/cart-fill.svg"
-                  alt="cart"
-                  width={50}
-                  height={50}
-                />
-                <p>Your cart is empty</p>
-                <Button className="button-primary transition-all">
-                  Start Shopping
-                </Button>
-              </div>
-            </SheetContent>
-          </Sheet>
+          <CartSheet />
 
           {/* Nav Sheet */}
           <Sheet>

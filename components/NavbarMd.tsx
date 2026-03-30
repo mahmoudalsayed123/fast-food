@@ -1,20 +1,15 @@
-import { navLinks } from "@/app/constant";
-import Image from "next/image";
-import Link from "next/link";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import { Button } from "./ui/button";
-import Logo from "./Logo";
+'use client';
+import { navLinks } from '@/app/_constant';
+import Image from 'next/image';
+import Link from 'next/link';
+import Logo from './Logo';
+import CartSheet from './CartSheet';
 
 const NavbarMd = () => {
   return (
-    <div className="hidden md:flex shadow-xl border-b border-gray-800 px-4 py-2 justify-between items-center">
+    <div className="hidden fixed top-0 left-0 right-0 z-50 bg-background md:flex shadow-xl border-b border-gray-800 px-4 py-2 justify-between items-center">
       <Logo />
+      {/* Nav Links */}
       <div>
         <ul className="flex items-center gap-5">
           {navLinks.map((link) => (
@@ -29,39 +24,11 @@ const NavbarMd = () => {
           ))}
         </ul>
       </div>
-      <div className="flex items-center gap-4 me-2">
-        {/* Cart Sheet */}
-        <Sheet>
-          <SheetTrigger asChild>
-            <Image
-              src="/assets/icons/cart.svg"
-              alt="cart"
-              width={45}
-              height={45}
-              className="cursor-pointer"
-            />
-          </SheetTrigger>
-          <SheetContent className="bg-background border-none w-[500px] text-foreground">
-            <SheetHeader className="border-b border-gray-800">
-              <SheetTitle className="p-6">
-                <h1 className="text-subheading">Your Cart</h1>
-              </SheetTitle>
-            </SheetHeader>
 
-            <div className="flex flex-col  flex-1 items-center justify-center gap-4">
-              <Image
-                src="/assets/icons/cart-fill.svg"
-                alt="cart"
-                width={50}
-                height={50}
-              />
-              <p>Your cart is empty</p>
-              <Button className="button-primary transition-all">
-                Start Shopping
-              </Button>
-            </div>
-          </SheetContent>
-        </Sheet>
+      {/* Cart Sheet */}
+      <div className="flex items-center gap-4 me-2">
+        <CartSheet />
+
         <Image
           src="/assets/icons/login.svg"
           alt="login"
