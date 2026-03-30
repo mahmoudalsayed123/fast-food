@@ -8,12 +8,8 @@ export const navLinks = [
     href: '/menu',
   },
   {
-    title: 'Build Burger',
-    href: '/',
-  },
-  {
     title: 'Track Order',
-    href: '/',
+    href: '/tracking_order',
   },
   {
     title: 'Rewards',
